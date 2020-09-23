@@ -1,11 +1,11 @@
 package com.example.listviewdemo;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.i("info", " " + myArrayList.get(i));
+                
+                Toast.makeText(MainActivity.this, myArrayList.get(i), Toast.LENGTH_SHORT).show();
             }
         });
 
